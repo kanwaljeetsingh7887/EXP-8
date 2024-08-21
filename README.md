@@ -1,306 +1,317 @@
-# EXP-7
+# EXP-8
 
 ## Aim:
-**To study and implement C++ Arrays and Strings..**
+**To study and implement C++ 2D Array - Matrices..**
 
 ## Software:
 `Microsoft VSCode`
 
 ## Theory:
-Array: • An arry is a fixed-size sequential collection of the elemnts of same data type. It consists of continuous memory locations. • The array's indexes begin at 0. Meaning that the first item saved at index 0 is [0]. • The final element of an array with size n is kept at index (n-1).
+A data structure that is used to store colection of the itmas of same data type is known as an Array.
+An array can be multidimensional also.
+A multidimensional array is an array with more than one dimension. It is the homogeneous collection of items where each element is accessed using multiple indices.
+
+A two-dimensional array in C++ is a collection of elements organized in rows and columns.
+It can be visualised as a matrix, table or grid. Its each element can be accessed using two indices: one for the rows and the other for the columns.
+
+Like a one-dimensional array, two-dimensional array indices also range from 0 to n-1 for both rows and columns.
 
 
-## Code: 7A
-```
-//KANWALJEET SINGH
-//ENTC B2
-//EXP 7A
-//23070123124
-#include<iostream>
-using namespace std; 
-
-// Program to print an array. 
-int main() {
-    int i;
-    int a1[5]={19, 20, 5, 6, 7};
-    int a2[5]={5,6,9,0,6};
-    cout<<"Array is: ";
-
-    for(i=0; i<5; ++i) {
-        cout<<"Array is: "<<a1[i]<<" "<<"\n";
-    }
-    for(i=0; i<5; ++i) {
-        cout<<"Array is: "<<a2[i]<<" "<<"\n";
-    }
-    return 0;
-}
-}
-```
-## Output:
-![image](https://github.com/user-attachments/assets/1baf2841-f9b9-4bdd-9385-01ccf12fb557)
-
-
-
-## Code: 7B 
-```
-//KANWALJEET SINGH
-//ENTC B2
-//EXP 7B
-//23070123124
-#include <iostream>
-#define S 4
-using namespace std;
-
-int main() {
-    int array1[S];
-    //take input from user
-    cout << "Enter " << S << " elements of array: ";
-    for (int index = 0; index < S; index++) {
-        cin >> array1[index];
-    }
-  cout << endl;
-
-    // display entered array ekements
-    for (int j : array1) {
-        cout << j << "  ";
-    }
-
-   return 0;
-}
-```
-
-## Output:
-![image](https://github.com/user-attachments/assets/3ac84316-7e56-45c1-9280-707292d26df0)
-
-
-
-## Code: 7C 
-```
-//KANWALJEET SINGH
-//ENTC B2
-//EXP 7C
-//23070123124
-int main() {
-    int i,n;
-    cout<<"Enter the size of array: ";
-    cin>> n;
-    int a[n]; 
-    //create array
-    for(i=0;i<n;i++)
-    {
-        cout<<"Enter elements "<<i+1<<": ";
-        cin>>a[i];
-    }
-    //display input array
-     cout<<"Array entered by the user is: ";
-    for(i=0;i<n;i++)
-    {
-        cout<<a[i]<<"";
-    }
-
-    //reverse array
-    cout<<"\n Reverse of the entered array is: "; 
-    for (i=n-1; i>=0; i--) {
-        cout<<a[i]<<"";
-    }
-    return 0; 
-}
-```
-## Output:
-![image](https://github.com/user-attachments/assets/7725fc56-4a69-438d-aa97-cb1bca28dbf1)
-
-
-
-## Code: 7D 
-```
-//KANWALJEET SINGH
-//ENTC B2
-//EXP 7D
-//23070123124
-
-#include<iostream>
-using namespace std;
-
-int main() {
-    int marks[5], i, j, num, a=0, count=0;
-    for(i=0;i<5;i++) {
-        cout<<"Enter element-"<<i+1<<": ";
-        cin>>marks[i];
-    }
-    cout<<"Enter element to be searched: ";
-    cin>>num;
-    for(j=0;j<5;j++) {
-        if(marks[j]==num) {
-            cout<<"Position of "<<num<<": "<<j+1<<endl;
-            count++;
-            a=1;
-        }
-    }
-    if(a==0) {
-        cout<<"Element not present";
-    }
-    else if(a==1) {
-        cout<<"Element is present: "<<count<<" times";
-    }
-}
-```
-## Output:
-![image](https://github.com/user-attachments/assets/f985ffcc-4c2a-4265-90b3-aaf5acf45593)
-
-## Code 7E
-```
-#include <iostream>
-using namespace std;
-
-int main() {
-    
-  // declare and initialize an array 
-  double numbers[] = {7.5, 2.5, 3.6, 5.12, 7.35, 24.27};
-
-  double sum = 0.0;
-  double count = 0.0;
-  double average;
-
-  cout << "The numbers are: ";
-
-  //  print array elements use of range-based for loop
-  for (const double n : numbers) {
-    cout << n << "  ";
-    //  calculate the sum
-    sum += n;
-    // count the no. of array elements
-    ++count;
-  }
-  // print the sum
-  cout << "\nSum = " << sum << endl;
-
-  // find the average
-  average = sum / count;
-  cout << "\nTheir Average = " << average << endl;
-  return 0;
-}
-```
-## Output:
-![image](https://github.com/user-attachments/assets/3c443243-638c-447f-830c-63126c31e6d4)
-
-
-## Code 7F.
-```
-// Finding minimum and maximum element of an array.          
-
-#include<iostream> 
-using namespace std; 
-
-int main() {
-    int n, i, max=0;  
-    cout<<"Enter the number of elements: ";
-    cin>>n;
-    int a[n];
-    for(i=0; i<n; i++) 
-    {
-        cout<<"Element "<<i<<" is: ";
-        cin>>a[i];
-    }
-    for (i=0;i<n; i++) 
-    {
-        if (a[i]>max) 
-        {
-            max=a[i];
-        }
-    }
-    int  min=a[0]; 
-    for (i=0; i<n;i++) 
-    {
-        if (min>a[i]) 
-        {
-            min=a[i];
-        }
-    }
-    cout<<"Maximum: "<<max<<"\n"<<"Minimum: "<<min;
-}
-```
-## Output:
-![image](https://github.com/user-attachments/assets/5a739d56-3592-4f9a-ba74-fbc9452db5b0)
-
-## Code 7G.
+## Code: 8A
 ```
 #include<iostream> 
-#include<string>
 using namespace std; 
 
 int main() 
 {
-    string a;
-    cout<<"Enter any word: "; 
-    cin>>a;
-    cout<<"Entered string is "<<a<<"."<<"\n";
+    int a[4][4], i, j, k, l;
+    for (i=0; i<4; i++) {
+        for (j=0; j<4; j++) {
+            cout<<"Enter elements: ("<<i<<j<<"):";
+            cin>>a[i][j];
+        }
+    }
+    for (k=0; k<4; k++) {
+        for (l=0; l<4; l++) {
+            cout<<a[k][l];
+            cout<<" ";
+        }
+        cout<<"\n";
+    }
+}
+
+```
+## Output:
+![image](https://github.com/user-attachments/assets/98cab37c-5c6e-45d1-8902-7aa333c3f909)
+
+
+
+
+## Code: 8B 
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Define matrix dimensions
+    int r1 = 3, c1 = 3;
+    int r2 = 3, c2 = 3;
+
+    int m1[r1][c1], m2[r2][c2], sum[r1][c1];
+
+    cout << "Enter elements of the first matrix:" << endl;
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m1[i][j];
+        }
+    }
+    cout << "Enter elements of the second matrix:" << endl;
+    for (int i = 0; i < r2; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m2[i][j];
+        }
+    }
+
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            sum[i][j] = m1[i][j] + m2[i][j];
+        }
+    }
+ 
+
+    cout << endl << "Sum of matrices:" << endl;
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            cout << sum[i][j] << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/2c707a25-40f0-4790-807c-a08ec7462f5e)
+![image](https://github.com/user-attachments/assets/d7f039f0-1194-4d69-8b6a-44272aa84be0)
 
-## Code 7H
+
+
+
+## Code: 8C 
 ```
-#include<iostream>
-#include<string>
+#include <iostream>
 using namespace std;
-int main() {
-string a, b;
-cout<<"Enter strings: ";
-cin>>a>>b;
-cout<<"CONCATENATION: "<<a+b;
 
-return 0;
+int main() {
+    // Define matrix dimensions
+    int r1 = 2, c1 = 2;
+    int r2 = 2, c2 = 2;
+
+    int m1[r1][c1], m2[r2][c2], sub[r1][c1];
+
+    cout << "Enter elements of the first matrix:" << endl;
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m1[i][j];
+        }
+    }
+    cout << "Enter elements of the second matrix:" << endl;
+    for (int i = 0; i < r2; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m2[i][j];
+        }
+    }
+
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            sub[i][j] = m1[i][j] -  m2[i][j];
+        }
+    }
+ 
+
+    cout << endl << "Difference of the matrices is: " << endl;
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            cout << sub[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+```
+## Output:
+![image](https://github.com/user-attachments/assets/b2cc7319-2137-4209-a3bb-75524622f78f)
+
+
+
+
+## Code: 8D 
+```
+#include <iostream>
+using namespace std;
+
+
+const int MAX = 100;
+
+void printDiagonalSums(int mat[][MAX], int n) 
+{ 
+    int principal = 0;
+    
+    for (int i = 0; i < n; i++)  
+    { 
+        // Condition for principal diagonal 
+        principal += mat[i][i]; 
+    } 
+  
+    cout << "Sum of the diagonal elements is: " << principal << endl; 
+} 
+
+int main() 
+{ 
+    int a[][MAX] = {{1, 2, 3, 4},  
+                    {8, 7, 6, 5},  
+                    {2, 1, 4, 3},  
+                    {5, 6, 7, 8}}; 
+    printDiagonalSums(a, 4); 
+    return 0; 
+}
+
+```
+## Output:
+![image](https://github.com/user-attachments/assets/198fd2fd-3fbe-4bdc-87a4-a4645b235e66)
+
+
+## Code 8E
+```
+// Multiplication of two matrices. 
+
+#include<iostream> 
+using namespace std; 
+
+int main() 
+{
+      int r1, c1, r2, c2;
+    
+    // Input dimensions of the first matrix
+    cout << "Enter rows and columns for the first matrix: ";
+    cin >> r1 >> c1;
+
+    // Input dimensions of the second matrix
+    cout << "Enter rows and columns for the second matrix: ";
+    cin >> r2 >> c2;
+
+    // Check if matrix multiplication is possible
+    if (c1 != r2) {
+        cout << "Matrix multiplication not possible!" << endl;
+        return 0;
+    }
+
+    // Define the matrices
+    int m1[r1][c1], m2[r2][c2], result[r1][c2];
+
+    // Input elements of the first and second matrix
+    cout << "Enter elements of the first matrix:" << endl;
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m1[i][j];
+        }
+    }
+    cout << "Enter elements of the second matrix:" << endl;
+    for (int i = 0; i < r2; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m2[i][j];
+        }
+    } 
+    // Initialize the result matrix with zeros
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            result[i][j] = 0;
+        }
+    }
+
+    // Matrix multiplication
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            for (int k = 0; k < c1; k++) {
+                result[i][j] += m1[i][k] * m2[k][j];
+            }
+        }
+    }
+
+    // Display the result
+    cout << "Resultant matrix:\n";
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            cout << result[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
 } 
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/ce4b79dd-dbb1-40f6-9082-fa10f85a5a74)
+![image](https://github.com/user-attachments/assets/5fa96dd9-9dc9-46cd-b18a-025b992fd203)
 
-## Code 7I.
+
+
+## Code 8F.
 ```
-#include<iostream>
-#include<string>
-using namespace std;
-int main() {
-string a;
-cout<<"Enter string: ";
-cin>>a;
-int i;
-for(i=a.length()-1;i>=0;i--) {
-cout<<a[i];
-}
-return 0;
-}
+// To find the transpose of a matrix. 
+
+#include<iostream> 
+using namespace std;      
+
+int main() 
+{
+    int r, c ;
+
+    // Getting the size of the matrix
+    cout << "Enter the number of rows and columns of the matrix: ";
+    cin >> r  >> c ;
+
+    int m[r][c], transpose[c][r];
+
+    // Getting elements of the matrix
+    cout << "Enter elements of the first matrix:" << endl;
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            cout << "Enter element at position (" << i << ", " << j << "): ";
+            cin >> m[i][j];
+        }
+    }
+
+    // Transposing the matrix
+    for(int i = 0; i < r; ++i) {
+        for(int j = 0; j < c; ++j) {
+            transpose[j][i] = m[i][j];
+        }
+    }
+
+    // Displaying the transpose of the matrix
+    cout << "\nTranspose of the matrix:" << endl;
+    for(int i = 0; i < c; ++i) {
+        for(int j = 0; j < r; ++j) {
+            cout << transpose[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+} 
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/5497a3a7-f400-4d3d-b595-65f4b251c0b1)
+![image](https://github.com/user-attachments/assets/86476ad4-7249-485c-bd1f-61def56b8d8c)
 
-## Code 7J.
-```
-#include<iostream>
-#include<string>
-using namespace std;
-int main() {
-string a;
-cout<<"Enter a string: ";
-cin>>a;
-int n=a.length(), i, flag=0;
-for(i=0;i<a.length();i++){
-if(a[i]==a[n-1]){
-flag=1;
-}
-n--;
-}
-if(flag==1){
-cout<<a<<" is palindrome";
-}
-else{
-cout<<a<<" is not palindrome";
-}
-}
-```
+## Conclusion:
+I learnt about the various operations performed on matrices and how we can do the same in C++ using two-dimensional arrays.
 
-## Output:
-![image](https://github.com/user-attachments/assets/b12d6c5f-8a68-4c36-a964-109a45ca17e9)
+
