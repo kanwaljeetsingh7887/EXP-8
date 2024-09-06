@@ -19,6 +19,10 @@ Like a one-dimensional array, two-dimensional array indices also range from 0 to
 
 ## Code: 8A
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8A
+//23070123124
 #include<iostream> 
 using namespace std; 
 
@@ -49,6 +53,10 @@ int main()
 
 ## Code: 8B 
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8B
+//23070123124
 #include <iostream>
 using namespace std;
 
@@ -101,6 +109,10 @@ int main() {
 
 ## Code: 8C 
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8C
+//23070123124
 #include <iostream>
 using namespace std;
 
@@ -153,6 +165,10 @@ int main() {
 
 ## Code: 8D 
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8D
+//23070123124
 #include <iostream>
 using namespace std;
 
@@ -189,6 +205,10 @@ int main()
 
 ## Code 8E
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8E
+//23070123124
 // Multiplication of two matrices. 
 
 #include<iostream> 
@@ -265,6 +285,10 @@ int main()
 
 ## Code 8F.
 ```
+//KANWALJEET SINGH
+//ENTC B2
+//EXP 8F
+//23070123124
 // To find the transpose of a matrix. 
 
 #include<iostream> 
